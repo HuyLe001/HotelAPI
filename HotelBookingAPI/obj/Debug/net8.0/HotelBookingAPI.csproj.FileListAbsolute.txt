@@ -145,3 +145,15 @@ D:\C_Shap\HotelBookingAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.genru
 D:\C_Shap\HotelBookingAPI\HotelBookingAPI\obj\Debug\net8.0\ref\HotelBookingAPI.dll
 D:\C_Shap\HotelBookingAPI\HotelBookingAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\C_Shap\HotelBookingAPI\HotelBookingAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.csproj.AssemblyReference.cache
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.AssemblyInfoInputs.cache
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.AssemblyInfo.cs
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.csproj.CoreCompileInputs.cache
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.sourcelink.json
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.dll
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\refint\HotelBookingAPI.dll
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.pdb

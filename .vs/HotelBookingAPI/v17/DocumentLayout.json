@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,16 +105,33 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "DockedWidth": 119,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "HotelBookingAPI\\appsettings.json",
+              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\appsettings.json",
+              "RelativeToolTip": "HotelBookingAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-17T09:46:58.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Controllers\\AuthController.cs",
@@ -122,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\AuthService.cs",
@@ -134,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\IAuthService.cs",
@@ -146,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\UserRepository.cs",
@@ -158,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\IUserRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\IUserRepository.cs",
@@ -170,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "JwtTokenGenerator.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\JwtTokenGenerator.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\JwtTokenGenerator.cs",
@@ -182,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IJwtTokenGenerator.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\IJwtTokenGenerator.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\IJwtTokenGenerator.cs",
@@ -194,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "StatisticsController.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Controllers\\StatisticsController.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Controllers\\StatisticsController.cs",
@@ -206,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "StatisticsService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\StatisticsService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\StatisticsService.cs",
@@ -218,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IStatisticsService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\IStatisticsService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\IStatisticsService.cs",
@@ -230,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "StatisticsRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\StatisticsRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\StatisticsRepository.cs",
@@ -242,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "IStatisticsRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\IStatisticsRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\IStatisticsRepository.cs",
@@ -254,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "StatisticsRows.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\StatisticsRows.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\StatisticsRows.cs",
@@ -266,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "InvalidCredentialsException.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Common\\InvalidCredentialsException.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Common\\InvalidCredentialsException.cs",
@@ -278,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Program.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Program.cs",
@@ -286,12 +307,11 @@
               "RelativeToolTip": "HotelBookingAPI\\Program.cs",
               "ViewState": "AgIAAFsAAAAAAAAAAAAIwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T00:25:50.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-15T00:25:50.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BookingsController.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Controllers\\BookingsController.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Controllers\\BookingsController.cs",
@@ -303,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\BookingService.cs",
@@ -315,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "IBookingService.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\IBookingService.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\IBookingService.cs",
@@ -327,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "BookingRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\BookingRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\BookingRepository.cs",
@@ -339,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "IBookingRepository.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\IBookingRepository.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\IBookingRepository.cs",
@@ -351,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Middleware\\ExceptionHandlingMiddleware.cs",
@@ -363,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BookingFilter.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Common\\BookingFilter.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Common\\BookingFilter.cs",
@@ -375,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CurrentUser.cs",
               "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Common\\CurrentUser.cs",
               "RelativeDocumentMoniker": "HotelBookingAPI\\Common\\CurrentUser.cs",
