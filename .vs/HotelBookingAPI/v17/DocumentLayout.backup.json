@@ -106,11 +106,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 119,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
@@ -120,7 +124,7 @@
               "RelativeDocumentMoniker": "HotelBookingAPI\\appsettings.json",
               "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\appsettings.json",
               "RelativeToolTip": "HotelBookingAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-10-17T09:46:58.751Z",
               "EditorCaption": ""

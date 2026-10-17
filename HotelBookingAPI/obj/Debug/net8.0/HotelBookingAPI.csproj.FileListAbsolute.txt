@@ -291,7 +291,7 @@ D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\swae.build.ex.cache
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBoo.DD245949.Up2Date
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.genruntimeconfig.cache
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\ref\HotelBookingAPI.dll
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
