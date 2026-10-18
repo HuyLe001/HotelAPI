@@ -295,3 +295,5 @@ D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBoo.DD2459
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\HotelBookingAPI.genruntimeconfig.cache
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\ref\HotelBookingAPI.dll
 D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\bin\Debug\net8.0\DotNetEnv.dll
+D:\C_Shap\Hotel_Github\HotelAPI\HotelBookingAPI\bin\Debug\net8.0\Superpower.dll
