@@ -3,3 +3,10 @@
 bin/
 obj/
 *.user
+
+
+*.json
+**/appsettings.json
+**/appsettings.*.json
+
+!**/appsettings.example.json
