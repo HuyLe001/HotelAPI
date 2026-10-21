@@ -75,7 +75,6 @@ public class StatisticsRepository : IStatisticsRepository
                 g.Key.RoomNumber,
                 g.Key.RoomTypeName,
                 TotalBookings = g.Count(),
-                TotalNights = g.Sum(b => EF.Functions.DateDiffDay(b.CheckInDate, b.CheckOutDate)),
                 Revenue = g.Sum(b => b.TotalPrice)
             })
             .OrderByDescending(x => x.TotalBookings)
@@ -83,8 +82,29 @@ public class StatisticsRepository : IStatisticsRepository
             .Take(top)
             .ToListAsync();
 
+        var topRoomIds = data.Select(d => d.RoomId).ToArray();
+        var bookingDates = topRoomIds.Length == 0
+            ? []
+            : await _context.Bookings
+                .AsNoTracking()
+                .Where(b => b.Status != "Cancelled" && topRoomIds.Contains(b.RoomId))
+                .Select(b => new { b.RoomId, b.CheckInDate, b.CheckOutDate })
+                .ToListAsync();
+
+        var totalNightsByRoom = bookingDates
+            .GroupBy(b => b.RoomId)
+            .ToDictionary(
+                group => group.Key,
+                group => group.Sum(b => (b.CheckOutDate - b.CheckInDate).Days));
+
         return data
-            .Select(d => new TopRoomRow(d.RoomId, d.RoomNumber, d.RoomTypeName, d.TotalBookings, d.TotalNights, d.Revenue))
+            .Select(d => new TopRoomRow(
+                d.RoomId,
+                d.RoomNumber,
+                d.RoomTypeName,
+                d.TotalBookings,
+                totalNightsByRoom.GetValueOrDefault(d.RoomId),
+                d.Revenue))
             .ToList();
     }
 
