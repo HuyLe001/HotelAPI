@@ -83,7 +83,7 @@ public class BookingService : IBookingService
             CheckInDate = checkIn,
             CheckOutDate = checkOut,
             TotalPrice = CalculatePrice(checkIn, checkOut, room.RoomType!.PricePerNight),
-            Status = "Pending"
+            Status = BookingStatus.Pending
         };
 
         await _repo.AddAsync(booking);
@@ -101,7 +101,7 @@ public class BookingService : IBookingService
 
         EnsureCanAccess(booking.CustomerId, user);
 
-        if (booking.Status != "Pending")
+        if (booking.Status != BookingStatus.Pending)
             throw new ArgumentException("Chỉ được đổi ngày khi booking đang ở trạng thái Pending");
 
         var checkIn = dto.CheckInDate.Date;
@@ -125,10 +125,10 @@ public class BookingService : IBookingService
         var booking = await _repo.GetForUpdateAsync(id)
             ?? throw new KeyNotFoundException($"Không tìm thấy booking có Id = {id}");
 
-        if (booking.Status != "Pending")
+        if (booking.Status != BookingStatus.Pending)
             throw new ArgumentException("Chỉ xác nhận được booking đang ở trạng thái Pending");
 
-        booking.Status = "Confirmed";
+        booking.Status = BookingStatus.Confirmed;
         await _repo.SaveChangesAsync();
     }
 
@@ -139,13 +139,13 @@ public class BookingService : IBookingService
 
         EnsureCanAccess(booking.CustomerId, user);
 
-        if (booking.Status == "Cancelled")
+        if (booking.Status == BookingStatus.Cancelled)
             throw new ArgumentException("Booking đã được hủy trước đó");
 
-        if (booking.CheckInDate.Date <= DateTime.Today && booking.Status == "Confirmed")
+        if (booking.CheckInDate.Date <= DateTime.Today && booking.Status == BookingStatus.Confirmed)
             throw new ArgumentException("Không thể hủy booking đã đến ngày nhận phòng");
 
-        booking.Status = "Cancelled";
+        booking.Status = BookingStatus.Cancelled;
         await _repo.SaveChangesAsync();
     }
 
@@ -154,7 +154,7 @@ public class BookingService : IBookingService
         var booking = await _repo.GetForUpdateAsync(id)
             ?? throw new KeyNotFoundException($"Không tìm thấy booking có Id = {id}");
 
-        if (booking.Status != "Cancelled")
+        if (booking.Status != BookingStatus.Cancelled)
             throw new ArgumentException("Chỉ được xóa booking đã hủy");
 
         _repo.Remove(booking);
@@ -194,7 +194,7 @@ public class BookingService : IBookingService
         CheckInDate = x.CheckInDate,
         CheckOutDate = x.CheckOutDate,
         TotalPrice = x.TotalPrice,
-        Status = x.Status
+        Status = x.Status.ToString()
     };
 
     private static RoomDto ToRoomDto(Room x) => new()

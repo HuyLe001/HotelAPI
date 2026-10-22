@@ -19,7 +19,10 @@ public class BookingRepository : IBookingRepository
         var query = _context.Bookings.AsNoTracking().AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(filter.Status))
-            query = query.Where(x => x.Status == filter.Status);
+        {
+            if (Enum.TryParse<BookingStatus>(filter.Status, out var status))
+                query = query.Where(x => x.Status == status);
+        }
 
         if (filter.CustomerId.HasValue)
             query = query.Where(x => x.CustomerId == filter.CustomerId.Value);
@@ -65,7 +68,7 @@ public class BookingRepository : IBookingRepository
             .Where(r => r.Status == "Available")
             // Loại các phòng đã có booking trùng khoảng ngày (bỏ qua booking đã hủy)
             .Where(r => !r.Bookings.Any(b =>
-                b.Status != "Cancelled" &&
+                b.Status != BookingStatus.Cancelled &&
                 b.CheckInDate < checkOut &&
                 b.CheckOutDate > checkIn));
 
@@ -92,7 +95,7 @@ public class BookingRepository : IBookingRepository
     public async Task<bool> HasOverlapAsync(int roomId, DateTime checkIn, DateTime checkOut, int? excludeBookingId = null) =>
         await _context.Bookings.AnyAsync(b =>
             b.RoomId == roomId &&
-            b.Status != "Cancelled" &&
+            b.Status != BookingStatus.Cancelled &&
             (excludeBookingId == null || b.Id != excludeBookingId) &&
             b.CheckInDate < checkOut &&
             b.CheckOutDate > checkIn);

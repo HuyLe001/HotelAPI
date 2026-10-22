@@ -1,4 +1,5 @@
 ﻿using HotelBookingAPI.Data;
+using HotelBookingAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelBookingAPI.Repositories;
@@ -18,9 +19,8 @@ public class StatisticsRepository : IStatisticsRepository
         var totalCustomers = await _context.Customers.CountAsync();
         var totalBookings = await _context.Bookings.CountAsync();
 
-        // SUM của tập rỗng trả về null nên ép kiểu decimal? rồi ?? 0
         var totalRevenue = await _context.Bookings
-            .Where(b => b.Status == "Confirmed")
+            .Where(b => b.Status == BookingStatus.Confirmed)
             .SumAsync(b => (decimal?)b.TotalPrice) ?? 0;
 
         return new SummaryData(totalRooms, totalCustomers, totalBookings, totalRevenue);
@@ -30,7 +30,7 @@ public class StatisticsRepository : IStatisticsRepository
     {
         var data = await _context.Bookings
             .AsNoTracking()
-            .Where(b => b.Status == "Confirmed" && b.CheckInDate.Year == year)
+            .Where(b => b.Status == BookingStatus.Confirmed && b.CheckInDate.Year == year)
             .GroupBy(b => b.CheckInDate.Month)
             .Select(g => new
             {
@@ -54,7 +54,7 @@ public class StatisticsRepository : IStatisticsRepository
             .ToListAsync();
 
         return data
-            .Select(d => new BookingStatusRow(d.Status, d.Count))
+            .Select(d => new BookingStatusRow(d.Status.ToString(), d.Count))
             .ToList();
     }
 
@@ -62,7 +62,7 @@ public class StatisticsRepository : IStatisticsRepository
     {
         var data = await _context.Bookings
             .AsNoTracking()
-            .Where(b => b.Status != "Cancelled")
+            .Where(b => b.Status != BookingStatus.Cancelled)
             .GroupBy(b => new
             {
                 b.RoomId,
@@ -87,7 +87,7 @@ public class StatisticsRepository : IStatisticsRepository
             ? []
             : await _context.Bookings
                 .AsNoTracking()
-                .Where(b => b.Status != "Cancelled" && topRoomIds.Contains(b.RoomId))
+                .Where(b => b.Status != BookingStatus.Cancelled && topRoomIds.Contains(b.RoomId))
                 .Select(b => new { b.RoomId, b.CheckInDate, b.CheckOutDate })
                 .ToListAsync();
 
@@ -112,7 +112,7 @@ public class StatisticsRepository : IStatisticsRepository
     {
         var data = await _context.Bookings
             .AsNoTracking()
-            .Where(b => b.Status != "Cancelled")
+            .Where(b => b.Status != BookingStatus.Cancelled)
             .GroupBy(b => new { b.CustomerId, b.Customer!.FullName })
             .Select(g => new
             {
@@ -122,11 +122,16 @@ public class StatisticsRepository : IStatisticsRepository
                 TotalSpent = g.Sum(b => b.TotalPrice)
             })
             .OrderByDescending(x => x.TotalSpent)
+            .ThenByDescending(x => x.TotalBookings)
             .Take(top)
             .ToListAsync();
 
         return data
-            .Select(d => new TopCustomerRow(d.CustomerId, d.FullName, d.TotalBookings, d.TotalSpent))
+            .Select(d => new TopCustomerRow(
+                d.CustomerId,
+                d.FullName,
+                d.TotalBookings,
+                d.TotalSpent))
             .ToList();
     }
 }
