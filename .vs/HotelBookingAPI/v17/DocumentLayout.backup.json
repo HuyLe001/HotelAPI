@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\dtos\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\dtos\\statisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\repositories\\statisticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\repositories\\statisticsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\repositories\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\dtos\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\common\\bookingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|solutionrelative:hotelbookingapi\\common\\bookingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED787ECC-5C00-4E46-8EE4-D363AD66120F}|HotelBookingAPI\\HotelBookingAPI.csproj|d:\\c_shap\\hotel_github\\hotelapi\\hotelbookingapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,23 +34,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 119,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StatisticsDtos.cs",
-              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\DTOs\\StatisticsDtos.cs",
-              "RelativeDocumentMoniker": "HotelBookingAPI\\DTOs\\StatisticsDtos.cs",
-              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\DTOs\\StatisticsDtos.cs",
-              "RelativeToolTip": "HotelBookingAPI\\DTOs\\StatisticsDtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\BookingService.cs",
+              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\BookingService.cs",
+              "RelativeToolTip": "HotelBookingAPI\\Services\\BookingService.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAA5wNEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:52:52.177Z",
+              "WhenOpened": "2026-10-22T03:10:54.205Z",
               "EditorCaption": ""
             },
             {
@@ -63,33 +67,33 @@
               "RelativeToolTip": "HotelBookingAPI\\Repositories\\StatisticsRepository.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAAkwIgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:48:55.05Z",
+              "WhenOpened": "2026-10-22T03:10:10.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\BookingService.cs",
-              "RelativeDocumentMoniker": "HotelBookingAPI\\Services\\BookingService.cs",
-              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Services\\BookingService.cs",
-              "RelativeToolTip": "HotelBookingAPI\\Services\\BookingService.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAA5wNEAAAABAAAAAAAAAA==",
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "HotelBookingAPI\\Repositories\\BookingRepository.cs",
+              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Repositories\\BookingRepository.cs",
+              "RelativeToolTip": "HotelBookingAPI\\Repositories\\BookingRepository.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAkwGkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:46:59.754Z",
+              "WhenOpened": "2026-10-22T03:09:37.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BookingDto.cs",
-              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\DTOs\\BookingDto.cs",
-              "RelativeDocumentMoniker": "HotelBookingAPI\\DTOs\\BookingDto.cs",
-              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\DTOs\\BookingDto.cs",
-              "RelativeToolTip": "HotelBookingAPI\\DTOs\\BookingDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Title": "BookingFilter.cs",
+              "DocumentMoniker": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Common\\BookingFilter.cs",
+              "RelativeDocumentMoniker": "HotelBookingAPI\\Common\\BookingFilter.cs",
+              "ToolTip": "D:\\C_Shap\\Hotel_Github\\HotelAPI\\HotelBookingAPI\\Common\\BookingFilter.cs",
+              "RelativeToolTip": "HotelBookingAPI\\Common\\BookingFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:45:06.765Z",
+              "WhenOpened": "2026-10-22T03:09:07.816Z",
               "EditorCaption": ""
             },
             {
@@ -102,7 +106,7 @@
               "RelativeToolTip": "HotelBookingAPI\\Models\\Booking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:32:28.083Z",
+              "WhenOpened": "2026-10-22T03:08:45.804Z",
               "EditorCaption": ""
             },
             {
@@ -115,7 +119,7 @@
               "RelativeToolTip": "HotelBookingAPI\\Models\\BookingStatus.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T02:31:55.732Z",
+              "WhenOpened": "2026-10-22T03:07:58.828Z",
               "EditorCaption": ""
             }
           ]
