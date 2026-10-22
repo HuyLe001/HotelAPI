@@ -1,0 +1,8 @@
+{
+  "title": "Havenly Hotel",
+  "description": "Hotel booking management system",
+  "language": "vi",
+  "robots": {
+    "index": false
+  }
+}
