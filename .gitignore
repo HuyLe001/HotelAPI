@@ -10,3 +10,7 @@ obj/
 **/appsettings.*.json
 
 !**/appsettings.example.json
+!frontend/package.json
+!frontend/.figma/
+!frontend/.figma/make/
+!frontend/.figma/make/site.json
