@@ -8,7 +8,7 @@
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal TotalPrice { get; set; }
-        public string Status { get; set; } = "Pending"; // Pending / Confirmed / Cancelled
+        public BookingStatus Status { get; set; } = BookingStatus.Pending;
 
         public Customer? Customer { get; set; }
         public Room? Room { get; set; }
