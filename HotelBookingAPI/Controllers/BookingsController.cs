@@ -1,5 +1,6 @@
 ﻿using HotelBookingAPI.Common;
 using HotelBookingAPI.DTOs;
+using HotelBookingAPI.Models;
 using HotelBookingAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -32,9 +33,15 @@ public class BookingsController : ControllerBase
         [FromQuery] DateTime? from,
         [FromQuery] DateTime? to)
     {
+        BookingStatus? parsedStatus = null;
+        if (!string.IsNullOrEmpty(status) && Enum.TryParse<BookingStatus>(status, true, out var s))
+        {
+            parsedStatus = s;
+        }
+
         var filter = new BookingFilter
         {
-            Status = status,
+            Status = parsedStatus,
             CustomerId = customerId,
             RoomId = roomId,
             From = from,

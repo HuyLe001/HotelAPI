@@ -16,7 +16,6 @@ public class BookingService : IBookingService
 
     public async Task<List<BookingDto>> GetAllAsync(BookingFilter filter, CurrentUser user)
     {
-        // Customer luôn bị ép lọc theo chính mình, bỏ qua customerId client gửi lên
         if (!user.IsAdmin)
         {
             if (user.CustomerId == null)
@@ -49,7 +48,6 @@ public class BookingService : IBookingService
 
     public async Task<BookingDto> CreateAsync(CreateBookingDto dto, CurrentUser user)
     {
-        // Admin đặt giúp khách (dùng dto.CustomerId), Customer chỉ đặt cho chính mình (lấy từ token)
         var customerId = user.IsAdmin ? dto.CustomerId : user.CustomerId;
         if (customerId == null)
             throw new UnauthorizedAccessException(NoPermission);
@@ -57,25 +55,20 @@ public class BookingService : IBookingService
         var checkIn = dto.CheckInDate.Date;
         var checkOut = dto.CheckOutDate.Date;
 
-        // 1. Kiểm tra ngày
         ValidateDates(checkIn, checkOut);
 
-        // 2. Kiểm tra khách hàng
         if (!await _repo.CustomerExistsAsync(customerId.Value))
             throw new ArgumentException("Khách hàng không tồn tại");
 
-        // 3. Kiểm tra phòng
         var room = await _repo.GetRoomWithTypeAsync(dto.RoomId)
             ?? throw new ArgumentException("Phòng không tồn tại");
 
         if (room.Status != "Available")
             throw new ArgumentException("Phòng đang bảo trì, không thể đặt");
 
-        // 4. Chống trùng lịch
         if (await _repo.HasOverlapAsync(dto.RoomId, checkIn, checkOut))
             throw new ArgumentException("Phòng đã có người đặt trong khoảng thời gian này");
 
-        // 5. Tính tiền (luôn tính ở server)
         var booking = new Booking
         {
             CustomerId = customerId.Value,
@@ -83,13 +76,12 @@ public class BookingService : IBookingService
             CheckInDate = checkIn,
             CheckOutDate = checkOut,
             TotalPrice = CalculatePrice(checkIn, checkOut, room.RoomType!.PricePerNight),
-            Status = "Pending"
+            Status = BookingStatus.Pending
         };
 
         await _repo.AddAsync(booking);
         await _repo.SaveChangesAsync();
 
-        // Đọc lại để có đủ tên khách, số phòng, tên loại phòng
         var saved = await _repo.GetByIdAsync(booking.Id);
         return ToDto(saved!);
     }
@@ -101,7 +93,7 @@ public class BookingService : IBookingService
 
         EnsureCanAccess(booking.CustomerId, user);
 
-        if (booking.Status != "Pending")
+        if (booking.Status != BookingStatus.Pending)
             throw new ArgumentException("Chỉ được đổi ngày khi booking đang ở trạng thái Pending");
 
         var checkIn = dto.CheckInDate.Date;
@@ -109,7 +101,6 @@ public class BookingService : IBookingService
 
         ValidateDates(checkIn, checkOut);
 
-        // Chống trùng lịch, loại trừ chính booking đang sửa
         if (await _repo.HasOverlapAsync(booking.RoomId, checkIn, checkOut, excludeBookingId: id))
             throw new ArgumentException("Phòng đã có người đặt trong khoảng thời gian này");
 
@@ -125,10 +116,10 @@ public class BookingService : IBookingService
         var booking = await _repo.GetForUpdateAsync(id)
             ?? throw new KeyNotFoundException($"Không tìm thấy booking có Id = {id}");
 
-        if (booking.Status != "Pending")
+        if (booking.Status != BookingStatus.Pending)
             throw new ArgumentException("Chỉ xác nhận được booking đang ở trạng thái Pending");
 
-        booking.Status = "Confirmed";
+        booking.Status = BookingStatus.Confirmed;
         await _repo.SaveChangesAsync();
     }
 
@@ -139,13 +130,13 @@ public class BookingService : IBookingService
 
         EnsureCanAccess(booking.CustomerId, user);
 
-        if (booking.Status == "Cancelled")
+        if (booking.Status == BookingStatus.Cancelled)
             throw new ArgumentException("Booking đã được hủy trước đó");
 
-        if (booking.CheckInDate.Date <= DateTime.Today && booking.Status == "Confirmed")
+        if (booking.CheckInDate.Date <= DateTime.Today && booking.Status == BookingStatus.Confirmed)
             throw new ArgumentException("Không thể hủy booking đã đến ngày nhận phòng");
 
-        booking.Status = "Cancelled";
+        booking.Status = BookingStatus.Cancelled;
         await _repo.SaveChangesAsync();
     }
 
@@ -154,17 +145,15 @@ public class BookingService : IBookingService
         var booking = await _repo.GetForUpdateAsync(id)
             ?? throw new KeyNotFoundException($"Không tìm thấy booking có Id = {id}");
 
-        if (booking.Status != "Cancelled")
+        if (booking.Status != BookingStatus.Cancelled)
             throw new ArgumentException("Chỉ được xóa booking đã hủy");
 
         _repo.Remove(booking);
         await _repo.SaveChangesAsync();
     }
 
-    // ===== Hàm hỗ trợ =====
     private const string NoPermission = "Bạn không có quyền thực hiện thao tác này";
 
-    // Admin được truy cập mọi booking, Customer chỉ booking của chính mình
     private static void EnsureCanAccess(int bookingCustomerId, CurrentUser user)
     {
         if (!user.IsAdmin && user.CustomerId != bookingCustomerId)
@@ -194,7 +183,7 @@ public class BookingService : IBookingService
         CheckInDate = x.CheckInDate,
         CheckOutDate = x.CheckOutDate,
         TotalPrice = x.TotalPrice,
-        Status = x.Status
+        Status = x.Status.ToString()
     };
 
     private static RoomDto ToRoomDto(Room x) => new()
